@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto&display=swap');
 
+/* base styles */
 body {
-	font-family: 'Montserrat', sans-serif;
-	// font-family: 'Roboto', sans-serif;
+	font-family: $heading-font;
+	margin-top: -16px; // get rid of white space top of page
+	margin-bottom: -16px; // get rid of white space bottom of page
 }
 
-/* base styles */
 * {
 	box-sizing: border-box;
 }
@@ -25,6 +26,7 @@ ul {
 
 a {
 	text-decoration: none;
+	color: #fff;
 }
 
 h1,

@@ -349,11 +349,13 @@ template {
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto&display=swap");
+/* base styles */
 body {
   font-family: "Montserrat", sans-serif;
+  margin-top: -16px;
+  margin-bottom: -16px;
 }
 
-/* base styles */
 * {
   box-sizing: border-box;
 }
@@ -373,6 +375,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 h1,
@@ -386,6 +389,65 @@ h2,
 h3,
 h3 {
   margin: 0;
+}
+
+header {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background: transparent;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+header a.logo {
+  width: 75px;
+  margin-left: 3rem;
+}
+header .nav {
+  margin-right: 3rem;
+}
+header .nav ul {
+  display: flex;
+}
+header .nav ul a {
+  display: block;
+  padding: 0 1rem;
+}
+
+.welcome-section {
+  background: url("/starry-sky-rotating-cropped.1d2aae30.jpg");
+  background-size: cover;
+  text-align: center;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.welcome-section .overlay {
+  background-color: #111111;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-section {
+  background: url("/starry-sky-with-trees.306ef6aa.jpg");
+  color: #fff;
+}
+
+footer {
+  background: #0a0809;
+  color: #fff;
 }
 
 /*# sourceMappingURL=/Dev-portfolio.e31bb0bc.css.map */
