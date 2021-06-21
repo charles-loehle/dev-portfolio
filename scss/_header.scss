@@ -1,5 +1,5 @@
 header {
-	height: 72px;
+	height: 77px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -10,7 +10,7 @@ header {
 	left: 0;
 	right: 0;
 	font-size: 11px;
-	font-weight: bold;
+	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.25rem;
 
@@ -24,10 +24,15 @@ header {
 
 		ul {
 			display: flex;
+			margin-top: 16px;
 
 			a {
 				display: block;
 				padding: 0 1rem;
+			}
+
+			a.active {
+				color: $green-accent;
 			}
 		}
 	}

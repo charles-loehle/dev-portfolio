@@ -3,8 +3,8 @@
 /* base styles */
 body {
 	font-family: $heading-font;
-	margin-top: -16px; // get rid of white space top of page
-	margin-bottom: -16px; // get rid of white space bottom of page
+	// margin-top: -16px; // get rid of white space top of page
+	// margin-bottom: -16px; // get rid of white space bottom of page
 }
 
 * {
@@ -39,4 +39,8 @@ h2,
 h3,
 h3 {
 	margin: 0;
+}
+
+.accent {
+	color: $green-accent;
 }

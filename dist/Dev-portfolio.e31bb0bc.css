@@ -352,8 +352,6 @@ template {
 /* base styles */
 body {
   font-family: "Montserrat", sans-serif;
-  margin-top: -16px;
-  margin-bottom: -16px;
 }
 
 * {
@@ -391,8 +389,12 @@ h3 {
   margin: 0;
 }
 
+.accent {
+  color: #3bb99b;
+}
+
 header {
-  height: 72px;
+  height: 77px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -403,7 +405,7 @@ header {
   left: 0;
   right: 0;
   font-size: 11px;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
 }
@@ -416,30 +418,155 @@ header .nav {
 }
 header .nav ul {
   display: flex;
+  margin-top: 16px;
 }
 header .nav ul a {
   display: block;
   padding: 0 1rem;
 }
+header .nav ul a.active {
+  color: #3bb99b;
+}
 
-.welcome-section {
+.hero {
   background: url("/starry-sky-rotating-cropped.1d2aae30.jpg");
   background-size: cover;
-  text-align: center;
+  background-position-y: 100%;
+  background-repeat: no-repeat;
   padding: 100px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   min-height: 100vh;
+  color: #fff;
 }
-.welcome-section .overlay {
-  background-color: #111111;
-  opacity: 0.7;
-  width: 100%;
+.hero .dark-overlay {
   height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.hero .hero-cta {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+}
+@media (min-width: 1000px) {
+  .hero .hero-cta {
+    align-items: center;
+  }
+}
+.hero .hero-cta__headline {
+  margin-bottom: 2rem;
+}
+.hero .hero-cta__headline p::before {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: #3bb99b;
+  margin-top: -1.5px;
+  position: absolute;
+  left: -5px;
+  top: 50%;
+}
+.hero .hero-cta__headline p {
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.3rem;
+  position: relative;
+  padding-left: 48px;
+}
+.hero .hero-cta__headline h1 {
+  font-size: 2.6rem;
+}
+.hero .hero-cta__headline h2 {
+  font-size: 2rem;
+}
+@media (min-width: 800px) {
+  .hero .hero-cta .hero-cta__buttons {
+    margin-bottom: 9rem;
+  }
+  .hero .hero-cta__headline p {
+    font-size: 1rem;
+  }
+  .hero .hero-cta__headline h1 {
+    font-size: 4.5rem;
+  }
+  .hero .hero-cta__headline h2 {
+    font-size: 3rem;
+  }
+}
+.hero .hero-cta__buttons {
+  margin-bottom: 4rem;
+}
+.hero .hero-cta__scroll {
+  align-self: end;
+}
+.hero .hero-cta__scroll .scroll-link {
+  font-size: 0.6rem;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+}
+.hero .hero-cta__scroll::after {
+  border-bottom: 2px solid #3bb99b;
+  border-right: 2px solid #3bb99b;
+  content: "";
+  display: block;
+  height: 9px;
+  width: 9px;
+  margin-top: -15px;
+  pointer-events: none;
+  position: relative;
+  left: 139px;
+  top: -24%;
+  transform-origin: 66% 66%;
+  transform: rotate(45deg);
 }
 
+.btn {
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 1rem;
+  line-height: 1.5;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+a.btn {
+  display: block;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn-outline-white {
+  color: #fff;
+  border-color: #fff;
+  margin-bottom: 14px;
+  font-size: 0.7rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+}
+
+.btn-outline-white:hover {
+  color: #0d0a0b;
+  background-color: #fff;
+}
+
+@media (min-width: 500px) {
+  .btn-outline-white {
+    width: 60%;
+  }
+}
+@media (min-width: 600px) {
+  a.btn-outline-white {
+    display: inline;
+    margin-right: 10px;
+  }
+}
 .contact-section {
   background: url("/starry-sky-with-trees.306ef6aa.jpg");
   color: #fff;
