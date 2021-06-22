@@ -1,8 +1,6 @@
+// MOBILE STYLES ==============================
 header {
 	height: 77px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 	position: fixed;
 	background: transparent;
 	z-index: 10;
@@ -17,13 +15,16 @@ header {
 	a.logo {
 		width: 75px;
 		margin-left: 3rem;
+
+		img {
+			width: 75px;
+		}
 	}
 
 	.nav {
 		margin-right: 3rem;
 
 		ul {
-			display: flex;
 			margin-top: 16px;
 
 			a {
@@ -33,6 +34,21 @@ header {
 
 			a.active {
 				color: $green-accent;
+			}
+		}
+	}
+}
+
+// DESKTOP STYLES ============================
+@media (min-width: 800px) {
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.nav {
+			ul {
+				display: flex;
 			}
 		}
 	}

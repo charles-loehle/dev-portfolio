@@ -395,9 +395,6 @@ h3 {
 
 header {
   height: 77px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: fixed;
   background: transparent;
   z-index: 10;
@@ -413,11 +410,13 @@ header a.logo {
   width: 75px;
   margin-left: 3rem;
 }
+header a.logo img {
+  width: 75px;
+}
 header .nav {
   margin-right: 3rem;
 }
 header .nav ul {
-  display: flex;
   margin-top: 16px;
 }
 header .nav ul a {
@@ -428,6 +427,16 @@ header .nav ul a.active {
   color: #3bb99b;
 }
 
+@media (min-width: 800px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .nav ul {
+    display: flex;
+  }
+}
 .hero {
   background: url("/starry-sky-rotating-cropped.1d2aae30.jpg");
   background-size: cover;
@@ -508,6 +517,7 @@ header .nav ul a.active {
   font-size: 0.6rem;
   letter-spacing: 0.3rem;
   font-weight: 600;
+  padding-right: 30px;
 }
 .hero .hero-cta__scroll::after {
   border-bottom: 2px solid #3bb99b;
