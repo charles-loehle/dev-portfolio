@@ -196,7 +196,19 @@ var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
 },{"normalize.css":"node_modules/normalize.css/normalize.css","./..\\images\\starry-sky-rotating-cropped.jpg":[["starry-sky-rotating-cropped.1d2aae30.jpg","images/starry-sky-rotating-cropped.jpg"],"images/starry-sky-rotating-cropped.jpg"],"./..\\images\\starry-sky-with-trees.jpg":[["starry-sky-with-trees.306ef6aa.jpg","images/starry-sky-with-trees.jpg"],"images/starry-sky-with-trees.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"main.js":[function(require,module,exports) {
+var menu = document.querySelector('#menu'); // hamburger
 
+var drawer = document.querySelector('#drawer');
+var main = document.querySelector('main'); // click on the hamburger menu to open and close nav drawer
+
+menu.addEventListener('click', function (e) {
+  drawer.classList.toggle('open');
+  e.stopPropagation();
+}); // click on main content area to close nav drawer
+
+main.addEventListener('click', function () {
+  drawer.classList.remove('open');
+});
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
@@ -231,7 +243,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52581" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60986" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

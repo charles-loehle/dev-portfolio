@@ -8,11 +8,20 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<link rel="stylesheet" href="/Dev-portfolio.e31bb0bc.css"></head>
 	<body>
-		<header id="header">
-			<a href="/" class="logo">
-				<img src="/cl-logo.518e01d6.png" alt="logo">
-			</a>
-			<nav id="navbar" class="nav">
+		<header id="header" class="header">
+			<div class="header__inner">
+				<a href="/" class="logo">
+					<img src="/cl-logo.518e01d6.png" alt="logo">
+				</a>
+
+				<a id="menu" class="header__menu">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"></path>
+					</svg>
+				</a>
+			</div>
+
+			<nav id="drawer" class="nav">
 				<ul>
 					<li><a class="active" href="#welcome-section">Home</a></li>
 					<li><a href="#about">About</a></li>
@@ -20,113 +29,101 @@
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
-
-			<a href="#" id="menu" class="header__menu">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-					<path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"></path>
-				</svg>
-			</a>
 		</header>
 
-		<!-- <nav id="navbar" class="nav">
-			<ul>
-				<li><a class="active" href="#welcome-section">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#projects">Work</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</nav> -->
-
-		<div id="welcome-section" class="hero">
-			<div class="dark-overlay">
-				<div class="hero-cta">
-					<div class="hero-cta__content">
-						<div class="hero-cta__headline">
-							<p class="accent">HELLO, I'M</p>
-							<h1>Charles Loehle</h1>
-							<h2>Web Developer</h2>
-						</div>
-						<div class="hero-cta__buttons">
-							<a href="#projects" class="btn btn-outline-white">LATEST PROJECTS</a>
-							<a href="#about" class="btn btn-outline-white">MORE ABOUT ME</a>
-						</div>
-						<div class="hero-cta__scroll">
-							<a href="#about" class="scroll-link smoothscroll">
-								SCROLL DOWN
-							</a>
+		<main>
+			<div id="welcome-section" class="hero">
+				<div class="dark-overlay">
+					<div class="hero-cta">
+						<div class="hero-cta__content">
+							<div class="hero-cta__headline">
+								<p class="accent">HELLO, I'M</p>
+								<h1>Charles Loehle</h1>
+								<h2>Web Developer</h2>
+							</div>
+							<div class="hero-cta__buttons">
+								<a href="#projects" class="btn btn-outline-white">LATEST PROJECTS</a>
+								<a href="#about" class="btn btn-outline-white">MORE ABOUT ME</a>
+							</div>
+							<div class="hero-cta__scroll">
+								<a href="#about" class="scroll-link smoothscroll">
+									SCROLL DOWN
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<section id="about" class="about-section">
-			<h2 class="about-section-header">Personal Info</h2>
-			<hr>
-			<div class="hello">
-				<h3>Hello</h3>
-				<p>
-					My name is Charles Loehle and I am a passionate frontend web developer
-					using web technologies to solve problems for various industries.
-				</p>
-			</div>
-			<div class="skills">
-				<h3>Skills</h3>
-				<div class="skills-logos">
-					<img src="/html-logo.20661c70.svg" alt="html-logo">
-					<img src="/css-logo.b3f1b9eb.svg" alt="css-logo">
-					<img src="/javascript-logo.807e1b1a.svg" alt="javascript-logo">
-					<img src="/react-logo.5be87c26.png" alt="react-logo">
-					<img src="/sass-logo.a2681805.png" alt="sass-logo">
-					<img src="/git-logo.e4ec0f7f.svg" alt="git-logo">
-					<img src="/xd-logo.b35dea7d.svg" alt="xd-logo">
+			<section id="about" class="about-section">
+				<h2 class="about-section-header">Personal Info</h2>
+				<hr>
+				<div class="hello">
+					<h3>Hello</h3>
+					<p>
+						My name is Charles Loehle and I am a passionate frontend web
+						developer using web technologies to solve problems for various
+						industries.
+					</p>
 				</div>
-			</div>
-		</section>
+				<div class="skills">
+					<h3>Skills</h3>
+					<div class="skills-logos">
+						<img src="/html-logo.20661c70.svg" alt="html-logo">
+						<img src="/css-logo.b3f1b9eb.svg" alt="css-logo">
+						<img src="/javascript-logo.807e1b1a.svg" alt="javascript-logo">
+						<img src="/react-logo.5be87c26.png" alt="react-logo">
+						<img src="/sass-logo.a2681805.png" alt="sass-logo">
+						<img src="/git-logo.e4ec0f7f.svg" alt="git-logo">
+						<img src="/xd-logo.b35dea7d.svg" alt="xd-logo">
+					</div>
+				</div>
+			</section>
 
-		<section id="projects" class="projects-section">
-			<h2 class="projects-section-header">Latest Projects</h2>
-			<hr>
-			<div class="projects-grid">
-				<a href="" class="project project-tile">
-					<img src="" alt="project" class="project-image">
-					<p class="project-title">Project One</p>
-				</a>
-				<a href="" class="project project-tile">
-					<img src="" alt="project" class="project-image">
-					<p class="project-title">Project Two</p>
-				</a>
-				<a href="" class="project project-tile">
-					<img src="" alt="project" class="project-image">
-					<p class="project-title">Project Three</p>
-				</a>
-				<a href="" class="project project-tile">
-					<img src="" alt="project" class="project-image">
-					<p class="project-title">Project Four</p>
-				</a>
-			</div>
-		</section>
+			<section id="projects" class="projects-section">
+				<h2 class="projects-section-header">Latest Projects</h2>
+				<hr>
+				<div class="projects-grid">
+					<a href="" class="project project-tile">
+						<img src="" alt="project" class="project-image">
+						<p class="project-title">Project One</p>
+					</a>
+					<a href="" class="project project-tile">
+						<img src="" alt="project" class="project-image">
+						<p class="project-title">Project Two</p>
+					</a>
+					<a href="" class="project project-tile">
+						<img src="" alt="project" class="project-image">
+						<p class="project-title">Project Three</p>
+					</a>
+					<a href="" class="project project-tile">
+						<img src="" alt="project" class="project-image">
+						<p class="project-title">Project Four</p>
+					</a>
+				</div>
+			</section>
 
-		<section id="contact" class="contact-section">
-			<div class="contact-section-header">
-				<h3>CONTACT</h3>
-				<h2 class="contact-section-header">Let's work together...</h2>
-				<p>How do you take your coffee?</p>
-			</div>
-			<div class="contact-links">
-				<a id="profile-link" href="https://github.com/charles-loehle" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
-				<a href="https://github.com/charles-loehle" class="btn contact-details"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-				<a href="mailto:charlesloehle@gmail.com" class="btn contact-details"><i class="fa fa-at"></i> Send an email</a>
-				<a href="tel:770-380-0752" class="btn contact-details"><i class="fas fa-mobile-alt"></i> Call me</a>
-			</div>
-		</section>
+			<section id="contact" class="contact-section">
+				<div class="contact-section-header">
+					<h3>CONTACT</h3>
+					<h2 class="contact-section-header">Let's work together...</h2>
+					<p>How do you take your coffee?</p>
+				</div>
+				<div class="contact-links">
+					<a id="profile-link" href="https://github.com/charles-loehle" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
+					<a href="https://github.com/charles-loehle" class="btn contact-details"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+					<a href="mailto:charlesloehle@gmail.com" class="btn contact-details"><i class="fa fa-at"></i> Send an email</a>
+					<a href="tel:770-380-0752" class="btn contact-details"><i class="fas fa-mobile-alt"></i> Call me</a>
+				</div>
+			</section>
 
-		<footer>
-			<p>
-				Design inspired by
-				<a href="https://www.rammaheshwari.com/">Ram Maheshwari</a>
-			</p>
-		</footer>
+			<footer>
+				<p>
+					Design inspired by
+					<a href="https://www.rammaheshwari.com/">Ram Maheshwari</a>
+				</p>
+			</footer>
+		</main>
 		<script src="/Dev-portfolio.e31bb0bc.js"></script>
 	</body>
 </html>
