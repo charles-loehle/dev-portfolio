@@ -1,7 +1,7 @@
 // MOBILE STYLES ==============================
 .header {
 	min-height: 77px;
-	position: fixed;
+	position: absolute;
 	background: transparent;
 	z-index: 10;
 	top: 0;
@@ -31,6 +31,7 @@
 		position: absolute;
 		padding: 1em;
 		right: 0;
+		cursor: pointer;
 
 		svg {
 			width: 32px;
