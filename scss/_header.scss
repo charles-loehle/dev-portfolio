@@ -81,16 +81,47 @@
 		align-items: center;
 		justify-content: space-between;
 
+		&__inner {
+			width: 40%;
+		}
+
 		&__menu {
 			display: none;
 		}
 		.nav {
-			margin-right: 3rem;
+			// margin-right: 3rem;
+			transform: translate(0, 0px);
+			padding: 0;
+			background-color: transparent;
+			width: 60%;
+			position: static;
+			margin-right: 2rem;
 
 			ul {
-				display: flex;
+				// display: flex;
 				margin-top: 1rem;
+				border-top: 0;
+				text-align: right;
+
+				li {
+					// flex-grow: 1;
+					display: inline-block;
+					border-bottom: 0;
+					padding: 0 1rem;
+
+					a {
+						padding: 0;
+					}
+				}
 			}
 		}
 	}
 }
+
+// @media (min-width: 1000px) {
+// 	.header {
+// 		.nav {
+// 			width: 30%;
+// 		}
+// 	}
+// }

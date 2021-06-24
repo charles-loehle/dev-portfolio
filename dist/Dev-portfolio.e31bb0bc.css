@@ -467,15 +467,32 @@ h3 {
     align-items: center;
     justify-content: space-between;
   }
+  .header__inner {
+    width: 40%;
+  }
   .header__menu {
     display: none;
   }
   .header .nav {
-    margin-right: 3rem;
+    transform: translate(0, 0px);
+    padding: 0;
+    background-color: transparent;
+    width: 60%;
+    position: static;
+    margin-right: 2rem;
   }
   .header .nav ul {
-    display: flex;
     margin-top: 1rem;
+    border-top: 0;
+    text-align: right;
+  }
+  .header .nav ul li {
+    display: inline-block;
+    border-bottom: 0;
+    padding: 0 1rem;
+  }
+  .header .nav ul li a {
+    padding: 0;
   }
 }
 .hero {
