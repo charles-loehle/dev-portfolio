@@ -1,2 +1,3 @@
 import './scss/style.scss';
-import './main.js';
+import './js/hamburger.js';
+import './js/stickyNav.js';

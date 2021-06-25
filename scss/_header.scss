@@ -12,6 +12,23 @@
 	text-transform: uppercase;
 	letter-spacing: 0.25rem;
 
+	&.sticky {
+		position: fixed;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&.fade-transition {
+		transition: all 1s ease-in-out;
+	}
+
+	&.scrolling {
+		opacity: 1;
+		visibility: visible;
+		// transition: all 1s ease-in-out;
+		background-color: #000;
+	}
+
 	&__inner {
 		z-index: 4;
 		position: relative;

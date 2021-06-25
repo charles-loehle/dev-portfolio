@@ -410,6 +410,19 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0.25rem;
 }
+.header.sticky {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+}
+.header.fade-transition {
+  transition: all 1s ease-in-out;
+}
+.header.scrolling {
+  opacity: 1;
+  visibility: visible;
+  background-color: #000;
+}
 .header__inner {
   z-index: 4;
   position: relative;
