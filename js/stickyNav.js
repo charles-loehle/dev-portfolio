@@ -8,12 +8,9 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-	// console.log(
-	// 		typeof window.scrollY === 'undefined' ? window.pageYOffset : window.scrollY
-	// 	);
-
 	// scrollY no IE support. pageYOffset IE 9 > support.
 	// The read-only scrollY property of the Window interface returns the number of pixels that the document is currently scrolled vertically.
+	/* at 400px before the about section, add or remove opacity: 0 and visibility: hidden  with .sticky class. so that .scrolling class can add opacity: 1 and visibility: visible. Triggered at 400px so the fade out is not abrupt. */
 	if (
 		(typeof window.scrollY === 'undefined'
 			? window.pageYOffset
@@ -21,14 +18,11 @@ function scrollFunction() {
 		aboutSectionYcoord - 400
 	) {
 		header.classList.add('sticky');
-		// header.classList.add('fade-in');
-		// document.querySelector('.logo img').classList.add('fade-in');
 	} else {
 		header.classList.remove('sticky');
-		// header.classList.remove('fade-in');
-		// document.querySelector('.logo img').classList.remove('fade-in');
 	}
 
+	/* at 350px before the about section, add css transition property with .fade-transition class  */
 	if (
 		(typeof window.scrollY === 'undefined'
 			? window.pageYOffset
@@ -36,14 +30,11 @@ function scrollFunction() {
 		aboutSectionYcoord - 350
 	) {
 		header.classList.add('fade-transition');
-		// header.classList.add('fade-in');
-		// document.querySelector('.logo img').classList.add('fade-in');
 	} else {
 		header.classList.remove('fade-transition');
-		// header.classList.remove('fade-in');
-		// document.querySelector('.logo img').classList.remove('fade-in');
 	}
 
+	/* at the about section, fade in the sticky nav opacity by adding .scrolling class */
 	if (
 		(typeof window.scrollY === 'undefined'
 			? window.pageYOffset

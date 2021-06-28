@@ -220,26 +220,25 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  // console.log(
-  // 		typeof window.scrollY === 'undefined' ? window.pageYOffset : window.scrollY
-  // 	);
   // scrollY no IE support. pageYOffset IE 9 > support.
   // The read-only scrollY property of the Window interface returns the number of pixels that the document is currently scrolled vertically.
+
+  /* at 400px before the about section, add or remove opacity: 0 and visibility: hidden  with .sticky class. so that .scrolling class can add opacity: 1 and visibility: visible. Triggered at 400px so the fade out is not abrupt. */
   if ((typeof window.scrollY === 'undefined' ? window.pageYOffset : window.scrollY) > aboutSectionYcoord - 400) {
-    header.classList.add('sticky'); // header.classList.add('fade-in');
-    // document.querySelector('.logo img').classList.add('fade-in');
+    header.classList.add('sticky');
   } else {
-    header.classList.remove('sticky'); // header.classList.remove('fade-in');
-    // document.querySelector('.logo img').classList.remove('fade-in');
+    header.classList.remove('sticky');
   }
+  /* at 350px before the about section, add css transition property with .fade-transition class  */
+
 
   if ((typeof window.scrollY === 'undefined' ? window.pageYOffset : window.scrollY) > aboutSectionYcoord - 350) {
-    header.classList.add('fade-transition'); // header.classList.add('fade-in');
-    // document.querySelector('.logo img').classList.add('fade-in');
+    header.classList.add('fade-transition');
   } else {
-    header.classList.remove('fade-transition'); // header.classList.remove('fade-in');
-    // document.querySelector('.logo img').classList.remove('fade-in');
+    header.classList.remove('fade-transition');
   }
+  /* at the about section, fade in the sticky nav opacity by adding .scrolling class */
+
 
   if ((typeof window.scrollY === 'undefined' ? window.pageYOffset : window.scrollY) > aboutSectionYcoord) {
     header.classList.add('scrolling');
@@ -283,7 +282,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63073" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59212" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
