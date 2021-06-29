@@ -240,12 +240,39 @@ function scrollFunction() {
   /* at the about section, fade in the sticky nav opacity by adding .scrolling class */
 
 
-  if ((typeof window.scrollY === 'undefined' ? window.pageYOffset : window.scrollY) > aboutSectionYcoord) {
+  if ((typeof window.scrollY === 'undefined' ? window.pageYOffset : window.scrollY) > aboutSectionYcoord - 50) {
     header.classList.add('scrolling');
   } else {
     header.classList.remove('scrolling');
   }
 }
+},{}],"js/navHighlighting.js":[function(require,module,exports) {
+var sections = document.querySelectorAll('section');
+var navLi = document.querySelectorAll('nav ul li'); // console.log(navLi);
+
+window.addEventListener('scroll', function () {
+  // console.log(pageYOffset);
+  var current = '';
+  sections.forEach(function (section) {
+    // get distance from top of page to the current section
+    var sectionTop = section.offsetTop; // console.log(sectionTop);
+    // get the heigh of each section
+
+    var sectionHeight = section.clientHeight; // console.log(sectionHeight);
+    // if the distance scrolled is past a specified value, get the current sections's id
+
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute('id'); // console.log(current);
+    }
+  });
+  navLi.forEach(function (li) {
+    li.classList.remove('active');
+
+    if (li.classList.contains(current)) {
+      li.classList.add('active');
+    }
+  });
+});
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
@@ -254,7 +281,9 @@ require("./scss/style.scss");
 require("./js/hamburger.js");
 
 require("./js/stickyNav.js");
-},{"./scss/style.scss":"scss/style.scss","./js/hamburger.js":"js/hamburger.js","./js/stickyNav.js":"js/stickyNav.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./js/navHighlighting.js");
+},{"./scss/style.scss":"scss/style.scss","./js/hamburger.js":"js/hamburger.js","./js/stickyNav.js":"js/stickyNav.js","./js/navHighlighting.js":"js/navHighlighting.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -282,7 +311,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59212" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52037" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

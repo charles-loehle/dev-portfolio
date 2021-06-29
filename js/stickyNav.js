@@ -38,7 +38,8 @@ function scrollFunction() {
 	if (
 		(typeof window.scrollY === 'undefined'
 			? window.pageYOffset
-			: window.scrollY) > aboutSectionYcoord
+			: window.scrollY) >
+		aboutSectionYcoord - 50
 	) {
 		header.classList.add('scrolling');
 	} else {
