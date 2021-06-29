@@ -1,7 +1,7 @@
 // MOBILE STYLES ==============================
-header {
-	height: 77px;
-	position: fixed;
+.header {
+	min-height: 77px;
+	position: absolute;
 	background: transparent;
 	z-index: 10;
 	top: 0;
@@ -12,8 +12,30 @@ header {
 	text-transform: uppercase;
 	letter-spacing: 0.25rem;
 
+	&.sticky {
+		position: fixed;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&.fade-transition {
+		transition: all 1s ease-in-out;
+	}
+
+	&.scrolling {
+		opacity: 1;
+		visibility: visible;
+		// transition: all 1s ease-in-out;
+		background-color: #000;
+	}
+
+	&__inner {
+		z-index: 4;
+		position: relative;
+	}
+
 	a.logo {
-		width: 75px;
+		width: 76px;
 		margin-left: 3rem;
 
 		img {
@@ -21,19 +43,49 @@ header {
 		}
 	}
 
+	&__menu {
+		display: inline-block;
+		position: absolute;
+		padding: 1em;
+		right: 0;
+		cursor: pointer;
+
+		svg {
+			width: 32px;
+			fill: #fff;
+		}
+	}
+
 	.nav {
-		margin-right: 3rem;
+		z-index: 3;
+		background-color: #000;
+		width: 100%;
+		position: absolute;
+		transform: translate(0, -434px);
+		transition: transform 0.3s ease;
+		padding: 120px 40px 62px;
+		top: 0;
+
+		&.open {
+			transform: translate(0, 0);
+		}
 
 		ul {
-			margin-top: 16px;
+			margin-top: 0;
+			border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+			li {
+				border-bottom: 1px dotted rgba(255, 255, 255, 0.07);
+
+				&.active a {
+					color: $green-accent;
+				}
+			}
 
 			a {
 				display: block;
-				padding: 0 1rem;
-			}
-
-			a.active {
-				color: $green-accent;
+				padding: 1.3rem 0;
+				line-height: 1.3rem;
 			}
 		}
 	}
@@ -41,15 +93,52 @@ header {
 
 // DESKTOP STYLES ============================
 @media (min-width: 800px) {
-	header {
+	.header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 
+		&__inner {
+			width: 40%;
+		}
+
+		&__menu {
+			display: none;
+		}
 		.nav {
+			// margin-right: 3rem;
+			transform: translate(0, 0px);
+			padding: 0;
+			background-color: transparent;
+			width: 60%;
+			position: static;
+			margin-right: 2rem;
+
 			ul {
-				display: flex;
+				// display: flex;
+				margin-top: 1rem;
+				border-top: 0;
+				text-align: right;
+
+				li {
+					// flex-grow: 1;
+					display: inline-block;
+					border-bottom: 0;
+					padding: 0 1rem;
+
+					a {
+						padding: 0;
+					}
+				}
 			}
 		}
 	}
 }
+
+// @media (min-width: 1000px) {
+// 	.header {
+// 		.nav {
+// 			width: 30%;
+// 		}
+// 	}
+// }

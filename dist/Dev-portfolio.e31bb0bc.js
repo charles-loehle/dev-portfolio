@@ -195,15 +195,95 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"normalize.css":"node_modules/normalize.css/normalize.css","./..\\images\\starry-sky-rotating-cropped.jpg":[["starry-sky-rotating-cropped.1d2aae30.jpg","images/starry-sky-rotating-cropped.jpg"],"images/starry-sky-rotating-cropped.jpg"],"./..\\images\\starry-sky-with-trees.jpg":[["starry-sky-with-trees.306ef6aa.jpg","images/starry-sky-with-trees.jpg"],"images/starry-sky-with-trees.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"main.js":[function(require,module,exports) {
+},{"normalize.css":"node_modules/normalize.css/normalize.css","./..\\images\\starry-sky-rotating-cropped.jpg":[["starry-sky-rotating-cropped.1d2aae30.jpg","images/starry-sky-rotating-cropped.jpg"],"images/starry-sky-rotating-cropped.jpg"],"./..\\images\\starry-sky-with-trees.jpg":[["starry-sky-with-trees.306ef6aa.jpg","images/starry-sky-with-trees.jpg"],"images/starry-sky-with-trees.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/hamburger.js":[function(require,module,exports) {
+var menu = document.querySelector('#menu'); // hamburger
 
+var drawer = document.querySelector('#drawer');
+var main = document.querySelector('main'); // click on the hamburger menu to open and close nav drawer
+
+menu.addEventListener('click', function (e) {
+  drawer.classList.toggle('open');
+  e.stopPropagation();
+}); // click on main content area to close nav drawer
+
+main.addEventListener('click', function () {
+  drawer.classList.remove('open');
+});
+},{}],"js/stickyNav.js":[function(require,module,exports) {
+var aboutSection = document.querySelector('#about');
+var aboutSectionYcoord = aboutSection.offsetTop; // console.log(aboutSectionYcoord);
+
+var header = document.querySelector('#header');
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  // scrollY no IE support. pageYOffset IE 9 > support.
+  // The read-only scrollY property of the Window interface returns the number of pixels that the document is currently scrolled vertically.
+
+  /* at 400px before the about section, add or remove opacity: 0 and visibility: hidden  with .sticky class. so that .scrolling class can add opacity: 1 and visibility: visible. Triggered at 400px so the fade out is not abrupt. */
+  if ((typeof window.scrollY === 'undefined' ? window.pageYOffset : window.scrollY) > aboutSectionYcoord - 400) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+  /* at 350px before the about section, add css transition property with .fade-transition class  */
+
+
+  if ((typeof window.scrollY === 'undefined' ? window.pageYOffset : window.scrollY) > aboutSectionYcoord - 350) {
+    header.classList.add('fade-transition');
+  } else {
+    header.classList.remove('fade-transition');
+  }
+  /* at the about section, fade in the sticky nav opacity by adding .scrolling class */
+
+
+  if ((typeof window.scrollY === 'undefined' ? window.pageYOffset : window.scrollY) > aboutSectionYcoord - 50) {
+    header.classList.add('scrolling');
+  } else {
+    header.classList.remove('scrolling');
+  }
+}
+},{}],"js/navHighlighting.js":[function(require,module,exports) {
+var sections = document.querySelectorAll('section');
+var navLi = document.querySelectorAll('nav ul li'); // console.log(navLi);
+
+window.addEventListener('scroll', function () {
+  // console.log(pageYOffset);
+  var current = '';
+  sections.forEach(function (section) {
+    // get distance from top of page to the current section
+    var sectionTop = section.offsetTop; // console.log(sectionTop);
+    // get the heigh of each section
+
+    var sectionHeight = section.clientHeight; // console.log(sectionHeight);
+    // if the distance scrolled is past a specified value, get the current sections's id
+
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute('id'); // console.log(current);
+    }
+  });
+  navLi.forEach(function (li) {
+    li.classList.remove('active');
+
+    if (li.classList.contains(current)) {
+      li.classList.add('active');
+    }
+  });
+});
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./scss/style.scss");
 
-require("./main.js");
-},{"./scss/style.scss":"scss/style.scss","./main.js":"main.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+require("./js/hamburger.js");
+
+require("./js/stickyNav.js");
+
+require("./js/navHighlighting.js");
+},{"./scss/style.scss":"scss/style.scss","./js/hamburger.js":"js/hamburger.js","./js/stickyNav.js":"js/stickyNav.js","./js/navHighlighting.js":"js/navHighlighting.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -231,7 +311,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52581" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52037" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
