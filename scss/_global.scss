@@ -48,3 +48,35 @@ h3 {
 .accent {
 	color: $green-accent;
 }
+
+.container {
+	margin: 0 auto;
+	max-width: 1280px;
+	width: 90%;
+}
+
+.gutters {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+@media only screen and (min-width: 601px) {
+	.container {
+		width: 85%;
+	}
+}
+
+@media only screen and (min-width: 993px) {
+	.container {
+		width: 70%;
+	}
+}
+
+@media (min-width: 800px) {
+	.flex {
+		display: flex;
+	}
+	.m6 {
+		width: 50%;
+	}
+}

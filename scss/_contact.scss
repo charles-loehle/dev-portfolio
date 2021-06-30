@@ -1,6 +1,27 @@
-.projects-section {
+// .contact-section {
+// 	background: url('../images/starry-sky-with-trees.jpg');
+// 	color: #fff;
+// 	height: 800px;
+// }
+
+.contact-section {
 	padding-top: 7rem;
-	background-color: #f1f1f1;
+	background: url('../images/starry-sky-with-trees.jpg');
+	background-size: cover;
+	background-position-y: 100%;
+	background-repeat: no-repeat;
+	color: #fff;
+	height: 800px;
+	position: relative;
+
+	.dark-overlay {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
 
 	h2 {
 		color: $green-accent;
@@ -19,13 +40,14 @@
 	}
 
 	p {
-		color: $text-color;
+		color: rgba(255, 255, 255, 0.5);
 		line-height: 1.875;
 	}
 
 	&__header {
 		text-align: center;
 		margin-bottom: 3rem;
+		margin-top: 4rem;
 	}
 
 	hr {
