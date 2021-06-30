@@ -1,44 +1,50 @@
+/* BASE BUTTON STYLES ================*/
 .btn {
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 400;
+	color: #212529;
 	text-align: center;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 	background-color: transparent;
 	border: 1px solid transparent;
-	padding: 1rem;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
 	line-height: 1.5;
+	border-radius: 0.25rem;
 	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
 		border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-a.btn {
-	display: block;
+.btn:hover {
+	text-decoration: none;
 }
 
 .btn:focus {
 	outline: 0;
 }
 
-.btn-outline-white {
+/* PRIMARY =====================*/
+.btn-accent {
 	color: #fff;
-	border-color: #fff;
-	margin-bottom: 14px;
-	font-size: 0.7rem;
-	letter-spacing: 0.2rem;
-	font-weight: 700;
+	background-color: $green-accent;
+	border-color: $green-accent;
 }
 
-.btn-outline-white:hover {
-	color: $heading-color;
-	background-color: #fff;
+.btn-accent:hover {
+	color: #fff;
+	background-color: $green-accent-hover-bg;
+	border-color: $green-accent-hover-border;
 }
 
-@media (min-width: 500px) {
-	.btn-outline-white {
-		width: 60%;
-	}
-}
-
-@media (min-width: 600px) {
-	a.btn-outline-white {
-		display: inline;
-		margin-right: 10px;
-	}
+.btn-accent:focus {
+	color: #fff;
+	background-color: $green-accent-hover-bg;
+	border-color: $green-accent-hover-border;
+	box-shadow: $green-accent-focus-box-shadow;
 }
