@@ -22,7 +22,7 @@
 
 	p {
 		color: $text-color;
-		line-height: 1.875;
+		line-height: 1.5;
 	}
 
 	&__header {
@@ -37,6 +37,22 @@
 
 	.projects-grid {
 		margin-top: 4rem;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 3rem;
+
+		.card {
+			background: #fff;
+			&__body {
+				padding: 2rem;
+			}
+
+			&__actions {
+				a.btn {
+					display: block;
+				}
+			}
+		}
 	}
 
 	@media (min-width: 800px) {
