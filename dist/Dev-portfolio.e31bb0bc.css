@@ -798,6 +798,12 @@ h3 {
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.contact-section__links a {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
 .contact-section h2 {
   color: #3bb99b;
   font-size: 1.1rem;
