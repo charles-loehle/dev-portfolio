@@ -1,16 +1,18 @@
 .projects-section {
 	padding-top: 7rem;
+	padding-bottom: 7rem;
 	background-color: #f1f1f1;
 
 	h2 {
 		color: $green-accent;
-		font-size: 1.1rem;
+		font-size: 1.4rem;
 		font-weight: 700;
+		letter-spacing: 0.15rem;
 	}
 
 	h3 {
-		font-size: 2.2rem;
-		font-weight: 700;
+		font-size: 3.2rem;
+		font-weight: 600;
 	}
 
 	h4 {
@@ -20,7 +22,7 @@
 
 	p {
 		color: $text-color;
-		line-height: 1.875;
+		line-height: 1.5;
 	}
 
 	&__header {
@@ -33,20 +35,31 @@
 		border-top: 1px solid rgba(0, 0, 0, 0.1);
 	}
 
-	&__hello {
-		margin: 4.5rem 0 3rem;
+	.projects-grid {
+		margin-top: 4rem;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 3rem;
+
+		.card {
+			background: #fff;
+			&__body {
+				padding: 2rem;
+			}
+
+			&__actions {
+				a.btn {
+					display: block;
+				}
+			}
+		}
 	}
 
-	&__skills {
-		.skills-logo-container {
-			display: flex;
-			align-items: center;
-			justify-content: space-around;
-			flex-wrap: wrap;
-			img {
-				width: 100px;
-				margin-bottom: 10px;
-			}
+	@media (min-width: 800px) {
+		.projects-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 3rem;
 		}
 	}
 }
