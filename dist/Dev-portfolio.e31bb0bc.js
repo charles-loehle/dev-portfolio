@@ -209,6 +209,7 @@ menu.addEventListener('click', function (e) {
 
 main.addEventListener('click', function () {
   drawer.classList.remove('open');
+  menu.classList.remove('open');
 });
 },{}],"js/stickyNav.js":[function(require,module,exports) {
 var aboutSection = document.querySelector('#about');
@@ -312,7 +313,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64153" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63277" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

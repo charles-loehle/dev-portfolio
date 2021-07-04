@@ -12,4 +12,5 @@ menu.addEventListener('click', e => {
 // click on main content area to close nav drawer
 main.addEventListener('click', () => {
 	drawer.classList.remove('open');
+	menu.classList.remove('open');
 });
