@@ -668,7 +668,7 @@ h3 {
   padding: 0.94rem 0.75rem;
   font-size: 0.8rem;
   line-height: 1.5;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
   letter-spacing: 0.2rem;
 }
 
@@ -680,7 +680,20 @@ h3 {
   outline: 0;
 }
 
-/* PRIMARY =====================*/
+/* WHITE */
+.btn-outline-white {
+  color: #fff;
+  border: 2px solid #fff;
+  width: 210px;
+  margin: 1.5rem 1rem 0 0;
+}
+
+.btn-outline-white:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+/* ACCENT =====================*/
 .btn-accent {
   color: #fff;
   background-color: #3bb99b;
@@ -814,6 +827,8 @@ h3 {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
 }
 .contact-section__links a {
   display: block;
@@ -841,7 +856,6 @@ h3 {
 .contact-section__header {
   text-align: center;
   margin-bottom: 3rem;
-  margin-top: 4rem;
 }
 .contact-section hr {
   width: 240px;
