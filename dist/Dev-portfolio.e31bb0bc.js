@@ -249,22 +249,24 @@ function scrollFunction() {
   }
 }
 },{}],"js/navHighlighting.js":[function(require,module,exports) {
+// Reference: https://www.youtube.com/watch?v=RsPWEmfOQdU&t=1170s&ab_channel=WEBCIFAR
 var sections = document.querySelectorAll('section');
 var navLi = document.querySelectorAll('nav ul li'); // console.log(navLi);
 
 window.addEventListener('scroll', function () {
-  // console.log(pageYOffset);
+  console.log('pageYOffset: ' + window.pageYOffset);
   var current = '';
   sections.forEach(function (section) {
     // get distance from top of page to the current section
-    var sectionTop = section.offsetTop; // console.log(sectionTop);
-    // get the heigh of each section
+    var sectionTop = section.offsetTop;
+    console.log('sectionTop: ' + sectionTop); // get the height of each section
 
-    var sectionHeight = section.clientHeight; // console.log(sectionHeight);
-    // if the distance scrolled is past a specified value, get the current sections's id
+    var sectionHeight = section.clientHeight;
+    console.log('section height: ' + sectionHeight); // if the distance scrolled is past a specified value, get the current sections's id
+    // pageYOffset = returns the number of pixels the document is currently scrolled along the vertical axis (that is, up or down)
 
-    if (pageYOffset >= sectionTop - sectionHeight / 3) {
-      current = section.getAttribute('id'); // console.log(current);
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute('id'); // console.log(sectionTop - sectionHeight / 12);
     }
   });
   navLi.forEach(function (li) {
@@ -313,7 +315,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56124" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61362" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
