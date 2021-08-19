@@ -19,7 +19,7 @@ window.addEventListener('scroll', () => {
 
 		// if the distance scrolled is past a specified value, get the current sections's id
 		// pageYOffset = returns the number of pixels the document is currently scrolled along the vertical axis (that is, up or down)
-		if (pageYOffset >= sectionTop) {
+		if (pageYOffset >= sectionTop - sectionHeight / 25) {
 			current = section.getAttribute('id');
 			// console.log(sectionTop - sectionHeight / 12);
 		}
