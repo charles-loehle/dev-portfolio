@@ -810,6 +810,9 @@ h3 {
 .projects-section .projects-grid .card__actions a.btn {
   display: block;
 }
+.projects-section .projects-grid .card__actions a.btn:first-of-type {
+  margin-bottom: 6px;
+}
 @media (min-width: 800px) {
   .projects-section .projects-grid {
     display: grid;

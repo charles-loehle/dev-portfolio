@@ -5,15 +5,12 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "parcel index.html",
-		"build": "parcel build index.html",
-		"deploy": "npm run build && gh-pages -d dist",
-		"gh-pages": "gh-pages -d dist"
+		"build": "parcel build index.html"
 	},
 	"homepage": "https://charles-loehle.github.io/dev-portfolio",
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"gh-pages": "^3.2.2",
 		"normalize.css": "^8.0.1"
 	},
 	"devDependencies": {

@@ -58,6 +58,10 @@
 
 				a.btn {
 					display: block;
+
+					&:first-of-type {
+						margin-bottom: 6px;
+					}
 				}
 			}
 		}
