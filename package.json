@@ -14,7 +14,8 @@
 		"normalize.css": "^8.0.1"
 	},
 	"devDependencies": {
-		"parcel-bundler": "^1.12.5",
+		"@parcel/transformer-sass": "^2.10.2",
+		"parcel": "^2.10.2",
 		"sass": "^1.35.1"
 	}
 }
